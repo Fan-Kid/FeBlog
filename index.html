@@ -1,0 +1,11 @@
+---
+layout: default
+title: My Blog
+---
+<h2>{{ page.title }}</h2>
+<p> My New Passage </p>
+<ul>
+	{% for post in sit.posts %}
+	<li>{{ post.date | date_to_string }} <a href="{{ sit.baseurl }}{{post.url }}">{{ post.title }}</a></li>
+	{% endfor %}
+</ul>
